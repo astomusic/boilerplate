@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 const port = process.env.PORT || 8080;
 
@@ -25,6 +26,12 @@ module.exports = {
           },
           {
             loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [autoprefixer],
+            },
           },
           {
             loader: 'sass-loader',

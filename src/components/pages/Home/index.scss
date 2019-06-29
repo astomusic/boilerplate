@@ -1,9 +1,25 @@
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100px;
+  }
+}
+
 .home  {
+  flex: 1;
   h1 {
     font-size: 24px;
   }
 
   .empty {
+    display: block;
+    animation-duration: 3s;
+    animation-name: slidein;
     background-color: #cccccc;
     width: 100px;
     height: 100px;
