@@ -12,24 +12,22 @@ module.exports = {
   },
   module:{
     rules:[
-      { // 첫번째 룰
+      {
         test: /\.(js)$/,
         exclude:/node_modules/,
         use:['babel-loader']
       },
-      { // 두번째 룰
-        test: /\.css$/,
+      {
+        test: /\.scss$/,
         use: [
           {
             loader: 'style-loader'
           },
           {
             loader: 'css-loader',
-            options: {
-              modules: true,
-              camelCase: true,
-              sourceMap: true
-            }
+          },
+          {
+            loader: 'sass-loader',
           }
         ]
       }

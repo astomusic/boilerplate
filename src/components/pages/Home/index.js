@@ -1,9 +1,15 @@
 import React from 'react';
 
+import './index.scss';
+
 const Home = () => {
   return (
     <React.Fragment>
-      <h1>HOME</h1>
+      <div className="home">
+        <h1>홈입니다.</h1>
+        <div className="empty">empty</div>
+      </div>
+      
     </React.Fragment>
   );
 };
