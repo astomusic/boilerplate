@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import * as React from 'react';
+import { useState }  from 'react';
 
 import './index.scss';
 
 const Home = () => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] =  useState(0);
   const [startTime, setStartTime] = useState('');
   const handleCounter = () => {
     if (counter === 0) {
@@ -19,7 +20,9 @@ const Home = () => {
   return (
     <React.Fragment>
       <div className="home">
-        <h1>홈입니다.</h1>
+        <h1>
+          홈입니다
+        </h1>
         <div
           className="empty"
           onClick={handleCounter}

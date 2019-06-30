@@ -14,9 +14,14 @@ module.exports = {
   module:{
     rules:[
       {
-        test: /\.(js)$/,
+        test: /\.ts(x?)$/,
+        exclude: /node_modules/,
+        use: ['ts-loader'],
+      },
+      {
+        test: /\.js(x?)$/,
         exclude:/node_modules/,
-        use:['babel-loader']
+        use: ['babel-loader']
       },
       {
         test: /\.scss$/,
@@ -39,6 +44,9 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', 'jsx'],
   },
   devtool: 'inline-source-map',
   plugins: [

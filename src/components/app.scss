@@ -1,0 +1,37 @@
+input,
+button,
+textarea {
+  border-radius: 0;
+  outline: none !important;
+}
+
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  &:hover, &:active, &:visited {
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+caption,
+label,
+p {
+  margin: 0;
+}
